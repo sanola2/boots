@@ -67,26 +67,45 @@
     </div>
     
     <div class="container">
-        <div class="card card-inverse mt-3" style="background-color: #333; border-color: #333;">
-          <div class="card-block">
-            <h3 class="card-title">Codeply</h3>
-            <p class="card-text">Amazing tool for you bootstraping!</p>
-            <a href="https://www.codeply.com/" target="_blank" class="btn btn-primary">Go</a>
-          </div>
+        <div class="container row mt-3">
+            <div class="col">
+                <textarea style="width: 100%; height: 250px;" id="chatWindow" readonly></textarea>
+                <form id="chat">
+                    <input style="width: 18%" id="userName" type="text" readonly>
+                    <input style="width: 60%" id="message" type="text">
+                    <input style="width: 19%" type="submit">
+                </form>
+            </div>
+            <div class="card card-inverse col" style="background-color: #333; border-color: #333;">
+              <div class="card-block">
+                <h4 class="card-title">웹소켓을 이용한 채팅방입니다.</h4>
+                <p class="card-text mt-5">왼쪽의 채팅창을 통해 사람들과 대화해 보세요!</p>
+              </div>
+            </div>
         </div>
-        <div class="card card-inverse mt-2" style="background-color: #333; border-color: #333;">
-          <div class="card-block">
-            <h3 class="card-title">Materialize</h3>
-            <p class="card-text">Make your own beautifully materialized website! </p>
-            <a href="http://materializecss.com/" target="_blank" class="btn btn-primary">Go</a>
-          </div>
-        </div>
-        <div class="card card-inverse mt-2" style="background-color: #333; border-color: #333;">
-          <div class="card-block">
-            <h3 class="card-title">Semantic UI</h3>
-            <p class="card-text">similar with bootstrap?</p>
-            <a href="#" class="btn btn-primary">Go</a>
-          </div>
+
+        <div id="contents" class="container">
+            <div class="card card-inverse mt-3" style="background-color: #333; border-color: #333;">
+              <div class="card-block">
+                <h3 class="card-title">Codeply</h3>
+                <p class="card-text">Amazing tool for you bootstraping!</p>
+                <a href="https://www.codeply.com/" target="_blank" class="btn btn-primary">Go</a>
+              </div>
+            </div>
+            <div class="card card-inverse mt-2" style="background-color: #333; border-color: #333;">
+              <div class="card-block">
+                <h3 class="card-title">Materialize</h3>
+                <p class="card-text">Make your own beautifully materialized website! </p>
+                <a href="http://materializecss.com/" target="_blank" class="btn btn-primary">Go</a>
+              </div>
+            </div>
+            <div class="card card-inverse mt-2" style="background-color: #333; border-color: #333;">
+              <div class="card-block">
+                <h3 class="card-title">Semantic UI</h3>
+                <p class="card-text">similar with bootstrap?</p>
+                <a href="#" class="btn btn-primary">Go</a>
+              </div>
+            </div>
         </div>
     </div>
     
