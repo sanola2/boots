@@ -73,8 +73,27 @@
                 <form id="chat">
                     <input style="width: 18%" id="userName" type="text" readonly>
                     <input style="width: 60%" id="message" type="text">
-                    <input style="width: 19%" type="submit">
+                    <input style="width: 19%" type="submit" value="전송">
                 </form>
+                <script src="/socket.io/socket.io.js"></script>
+                <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+                <script>
+                  var socket = io();
+                  $('#chat').on('submit', function(e) {
+                    socket.emit('send message', $('#userName').val(), $('#message').val());
+                    $('#message').val("");
+                    e.preventDefault();
+                  });
+
+                  socket.on('receive message', function(msg) {
+                    $('#chatWindow').append(msg + "\n");
+                    $('#chatWindow').scrollTop($('#chatWindow').innerHeight());
+                  });
+
+                  socket.on('change name', function(name) {
+                    $('#userName').val(name);
+                  })
+                </script>
             </div>
             <div class="card card-inverse col" style="background-color: #333; border-color: #333;">
               <div class="card-block">
